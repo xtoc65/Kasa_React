@@ -1,5 +1,6 @@
 import Logo from '../assets/BannierApropos.png'
 import '../utils/styles/bannier.css'
+import Collapse from '../components/Collapse'
 
 
 function Apropos() {
@@ -7,7 +8,8 @@ function Apropos() {
     <main> 
         <div className="banner">
             <img src={Logo} alt="Bannier A propos" />
-        </div>        
+        </div>    
+        <Collapse />    
     </main>
   );
 }

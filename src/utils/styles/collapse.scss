@@ -1,0 +1,25 @@
+.collapsible {
+    cursor: pointer;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    background-color: #FF6060;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .content {
+    max-height: 200px; /* Ajustez la hauteur maximale selon le contenu */
+    padding: 10px 18px;
+}
