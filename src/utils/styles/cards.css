@@ -1,0 +1,22 @@
+.cards {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cards article {
+  margin: 0 0 3em 0;
+}
+.cards img {
+  width: 280px;
+  height: 260px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cards p {
+  color: #FFFFFF;
+  margin: -50px auto 0px 4px;
+  width: 215px;
+}/*# sourceMappingURL=cards.css.map */
