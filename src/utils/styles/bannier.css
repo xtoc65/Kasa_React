@@ -1,6 +1,7 @@
 .banner {
   position: relative;
   align-self: center;
+  margin-bottom: 3em;
 }
 .banner img {
   border-radius: 10px;
