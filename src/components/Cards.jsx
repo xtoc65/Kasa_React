@@ -1,17 +1,7 @@
-import '../utils/styles/cards.css'
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+import '../utils/styles/cards.css'
 
-function Cards() {
-    const [logements, setLogements] = useState([]) 
-
-    useEffect(()=>{
-        fetch("data/logements.json")
-        .then((reponse => reponse.json()))
-        .then((data => {
-            setLogements(data)
-        }))
-    }, [logements])
+function Cards({logements}) {
     return (
         <section className="cards">
         {logements.map((logement) => (

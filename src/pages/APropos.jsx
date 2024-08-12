@@ -1,6 +1,6 @@
 import Logo from '../assets/BannierApropos.png'
-import '../utils/styles/bannier.css'
 import Collapse from '../components/Collapse'
+import '../utils/styles/bannier.css'
 
 
 function Apropos() {
