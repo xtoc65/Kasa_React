@@ -1,0 +1,56 @@
+.logement {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.picture {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.localisation h1 {
+  color: #FF6060;
+  font-size: 2.5em;
+  margin: 0;
+}
+.localisation p {
+  font-family: Montserrat;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.host {
+  display: flex;
+  align-items: center;
+  text-align: end;
+}
+.host p {
+  display: flex;
+  color: #FF6060;
+  margin-right: 10px;
+  width: 60px;
+}
+.host img {
+  border-radius: 70px;
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.tags {
+  width: 115px;
+  height: 25px;
+  background-color: #FF6060;
+  border-radius: 10px;
+  padding: 5px 10px;
+}/*# sourceMappingURL=logement.css.map */

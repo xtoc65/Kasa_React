@@ -48,5 +48,4 @@ function Collapse() {
   );
 };
 
-  
-  export default Collapse
+export default Collapse
