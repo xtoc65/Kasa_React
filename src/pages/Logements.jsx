@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import CollapseLogement from '../components/CollapseLogement';
 import "../utils/styles/logement.css"
+import '../utils/styles/collapse.css'
 
 function Logements() {
   const { id } = useParams(window.location.href); // Récupère l'ID du logement à partir de l'URL
@@ -37,10 +37,25 @@ function Logements() {
             </div>
         </div>
         <div>
-            <p className='tags'>{logement.tags}</p>
+          <div className="tags">
+            {logement.tags.map((tags , index) =>
+                (
+                  <p key={index}>{tags}</p>
+                )
+              )
+            } 
+          </div>
             <img scr={logement.pating}></img>
-        </div>      
-        <CollapseLogement />
+        </div>     
+        <p className="description">{logement.description}</p>
+        <div className="collapse-container">
+                {logement.equipments.map((equipement, index) =>
+                    (
+                      <p className="description_equipement" key={index}>{equipement}</p>
+                    )
+                  )
+                }
+        </div>
     </div>
   );
 }

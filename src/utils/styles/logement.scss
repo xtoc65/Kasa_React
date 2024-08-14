@@ -48,10 +48,15 @@
 }
 
 .tags{
-    width: 115px;
-    height: 25px;
-    background-color: #FF6060;
-    border-radius: 10px;
     padding: 5px 10px;
-
+    display: flex;
+    p{
+        background: #FF6060;
+        border-radius: 10px;
+        color: #FFFFFF;
+        padding: 5px;
+        width: 100px;
+        margin: 0 5px;
+        text-align: center;
+    }
 }
