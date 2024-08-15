@@ -36,7 +36,7 @@ function Collapse() {
           <div className="collapsible" onClick={() => toggleCollapse(index)}>
             <span>{slide.title}</span>
             <span className="arrow">
-              {activeIndex === index ? <img src={flecheBas}></img> : <img src={flecheHaut}></img>}
+              {activeIndex === index ? <img src={flecheBas} alt="Flèche bas" /> : <img src={flecheHaut} alt="Flèche haut" />}
             </span>
           </div>
           <div className={`content ${activeIndex === index ? "active" : ""}`}>
@@ -46,6 +46,6 @@ function Collapse() {
       ))}
     </div>
   );
-};
+}
 
-export default Collapse
+export default Collapse;
