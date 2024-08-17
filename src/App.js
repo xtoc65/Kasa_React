@@ -1,4 +1,3 @@
-import './utils/styles/index.css';
 import {Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -6,6 +5,7 @@ import APropos from './pages/APropos'
 import Logements from './pages/Logements'
 import Error from './pages/404'
 import Footer from './components/Footer'
+import './assets/styles/index.css';
 
 function App() {
   return (

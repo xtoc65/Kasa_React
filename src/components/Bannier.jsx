@@ -1,5 +1,5 @@
 import Bannier from '../assets/BannierHeader.png'
-import '../utils/styles/bannier.css'
+import '../assets/styles/bannier.css'
 
 function BannierHeader() {
   return (

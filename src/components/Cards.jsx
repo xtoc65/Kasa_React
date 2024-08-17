@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../utils/styles/cards.css'
+import '../assets/styles/cards.css'
 
 function Cards({logements}) {
     return (

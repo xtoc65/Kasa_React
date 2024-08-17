@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import flecheHaut from '../assets/fleche_haut.png'
 import flecheBas from '../assets/fleche_bas.png'
-import '../utils/styles/collapse.css'
-import "../utils/styles/logement.css"
+import '../assets/styles/collapse.css'
+import "../assets/styles/logement.css"
 
 function Logements() {
   const [activeIndex, setActiveIndex] = useState(null);
   const [logement, setLogement] = useState(null);
-  const { id } = useParams(); // Utilisation correcte de `useParams`
+  const { id } = useParams();
 
   const toggleCollapse = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -32,7 +32,9 @@ function Logements() {
 
   return (
     <div className="logement">
+      {/*Vérifie si la propriété 'pictures' de l'objet 'logement' existe et contient au moins une image */}
       {logement.pictures && logement.pictures.length > 0 && (
+        // Affiche la première image du tableau 'pictures' avec le titre du logement comme texte alternatif
         <img src={logement.pictures[0]} alt={logement.title} className="picture" />
       )}
       <div className="detail">

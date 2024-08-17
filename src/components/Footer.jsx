@@ -1,5 +1,5 @@
 import Logo from '../assets/LogoFooter.png'
-import '../utils/styles/footer.css'
+import '../assets/styles/footer.css'
 
 function Header() {
     return (

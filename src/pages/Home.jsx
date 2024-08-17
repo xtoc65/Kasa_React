@@ -1,17 +1,10 @@
-import { useEffect, useState } from 'react'
+import {useFetch} from '../utils/hooks'
 import Bannier from '../components/Bannier'
 import Cards from '../components/Cards'
 
 function Home() {  
-  const [logements, setLogements] = useState([]) 
-
-  useEffect(()=>{
-    fetch("data/logements.json")
-      .then((reponse => reponse.json()))
-      .then((data => {
-        setLogements(data)
-      }))
-  }, [])
+  const logements = useFetch('/data/logements.json') 
+  
   return (
     <main> 
         {/* {JSON.stringify(logements)} */}   
