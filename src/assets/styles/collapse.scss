@@ -38,3 +38,12 @@
 .content.active {
     display: block;
 }
+
+@media screen and (min-width: 320px) and (max-width: 650px) {
+    .collapsible{
+        padding: 4px;
+    }
+    .collapse-container {
+        max-width: 100%;
+    } 
+}

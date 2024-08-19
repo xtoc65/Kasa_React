@@ -21,7 +21,7 @@
   }
 }
   
-  @media screen and (min-width: 345px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
     .nav_container {
       margin: 0em 2em;
       img{
@@ -34,4 +34,11 @@
       font-size: 12px;
       padding: 10px;
     }
+}
+
+@media screen and (min-width: 320px) and (max-width: 365px) {
+  .nav_link {
+    display: block;
+    padding: 5px;
   }
+}
