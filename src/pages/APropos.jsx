@@ -32,7 +32,7 @@ function Apropos() {
         <div className="banner">
             <img src={Logo} alt="Bannier A propos" />
         </div>    
-        {slides.map(slide => <Collapse key={slide.id} slide={slide}/>)}    
+        {slides.map(slide => <Collapse key={slide.id} id={slide.id} title={slide.title} content={slide.content}/>)}    
     </main>
   );
 }

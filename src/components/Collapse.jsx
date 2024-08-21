@@ -3,7 +3,7 @@ import flecheHaut from '../assets/fleche_haut.png'
 import flecheBas from '../assets/fleche_bas.png'
 import '../assets/styles/collapse.css'
 
-function Collapse({slide}) {
+function Collapse({id, title, content, items}) {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleCollapse = (index) => {
@@ -12,15 +12,16 @@ function Collapse({slide}) {
 
   return (
     <div className="collapse-container">
-      <div key={slide.id} className="collapse-section">
-        <div className="collapsible" onClick={() => toggleCollapse(slide.id)}>
-          <span>{slide.title}</span>
+      <div key={id} className="collapse-section">
+        <div className="collapsible" onClick={() => toggleCollapse(id)}>
+          <span>{title}</span>
           <span className="arrow">
-              {activeIndex === slide.id ? <img src={flecheBas} alt="Flèche bas" /> : <img src={flecheHaut} alt="Flèche haut" />}
+              {activeIndex === id ? <img src={flecheBas} alt="Flèche bas" /> : <img src={flecheHaut} alt="Flèche haut" />}
             </span>
           </div>
-          <div className={`content ${activeIndex === slide.id ? "active" : ""}`}>
-            <p>{slide.content}</p>
+          <div className={`content ${activeIndex === id ? "active" : ""}`}>
+            <p className="description">{content}</p>
+            <ul className="description_equipement">{items?.map(item => (<li>{item}</li>))}</ul>
           </div>
         </div>
       

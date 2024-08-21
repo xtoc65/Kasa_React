@@ -1,13 +1,9 @@
-import {useFetch} from '../utils/hooks'
 import Bannier from '../components/Bannier'
 import Cards from '../components/Cards'
 
-function Home() {  
-  const logements = useFetch('/data/logements.json') 
-  
+function Home({logements}) {    
   return (
-    <main> 
-        {/* {JSON.stringify(logements)} */}   
+    <main>  
         <Bannier />
         <Cards logements={logements}/>
     </main>
