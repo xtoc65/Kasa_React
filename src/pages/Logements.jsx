@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Carousel from '../components/Carousel'
 import Rating from '../components/Rating'
@@ -10,10 +10,14 @@ function Logements({data}) {
   // Utilisation de `useParams` pour obtenir l'ID du logement à partir de l'URL
   const { id } = useParams();
   
-  const selectedLogement = data.find((item) => item.id === id);
-  setLogement(selectedLogement);
-    
-
+  // Utilisation de `useEffect` pour mettre à jour `logement` uniquement quand `logements` ou `id` changent
+  useEffect(() =>{
+    if(data){ // Vérifie si les données sont disponibles
+      const selectedLogement = data.find((item) => item.id === id);
+      setLogement(selectedLogement);
+    }
+  },[data, id]); // Dépendances : déclenche l'effet quand `logements` ou `id` changent
+  
   if (!logement) {
     return <div>Chargement...</div>; // État de chargement ou un message approprié
   }
@@ -44,8 +48,10 @@ function Logements({data}) {
           </div>
         </div>
         {/* Affiche le logement unique */}
-        <Collapse id={logement.id} title="Description" content={logement.description} /> 
-        <Collapse id={logement.id} title="Équipement" items={logement.equipments} /> 
+        <div className='detail'>
+          <Collapse key={1} id={logement.id} title="Description" content={logement.description} /> 
+          <Collapse key={2} id={logement.id} title="Équipement" items={logement.equipments} /> 
+        </div>
       </div>
     </main>
   );

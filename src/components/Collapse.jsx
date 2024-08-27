@@ -11,21 +11,20 @@ function Collapse({id, title, content, items}) {
   };
 
   return (
-    <div className="collapse-container">
-      <div key={id} className="collapse-section">
-        <div className="collapsible" onClick={() => toggleCollapse(id)}>
-          <span>{title}</span>
-          <span className="arrow">
-              {activeIndex === id ? <img src={flecheBas} alt="Flèche bas" /> : <img src={flecheHaut} alt="Flèche haut" />}
-            </span>
-          </div>
-          <div className={`content ${activeIndex === id ? "active" : ""}`}>
-            <p className="description">{content}</p>
-            <ul className="description_equipement">{items?.map(item => (<li>{item}</li>))}</ul>
-          </div>
+      <div className="collapse-container">
+        <div className="collapse-section">
+          <div className="collapsible" onClick={() => toggleCollapse(id)}>
+            <span>{title}</span>
+            <span className="arrow">
+                {activeIndex === id ? <img src={flecheBas} alt="Flèche bas" /> : <img src={flecheHaut} alt="Flèche haut" />}
+              </span>
+            </div>
+            <div className={`content ${activeIndex === id ? "active" : ""}`}>
+              <p className="description">{content}</p>
+              <ul className="description_equipement">{items?.map(item => (<li>{item}</li>))}</ul>
+            </div>
         </div>
-      
-    </div>
+      </div>
   );
 }
 
