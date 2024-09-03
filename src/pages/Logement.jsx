@@ -1,22 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
 import Carousel from '../components/Carousel'
 import Rating from '../components/Rating'
 import Collapse from '../components/Collapse'
 import "../assets/styles/logement.css"
 
-function Logements({data}) {
-  const [logement, setLogement] = useState(null);
-  // Utilisation de `useParams` pour obtenir l'ID du logement à partir de l'URL
-  const { id } = useParams();
-  
-  // Utilisation de `useEffect` pour mettre à jour `logement` uniquement quand `logements` ou `id` changent
-  useEffect(() =>{
-    if(data){ // Vérifie si les données sont disponibles
-      const selectedLogement = data.find((item) => item.id === id);
-      setLogement(selectedLogement);
-    }
-  },[data, id]); // Dépendances : déclenche l'effet quand `logements` ou `id` changent
+function DetailLogement({logement}) {
   
   if (!logement) {
     return <div>Chargement...</div>; // État de chargement ou un message approprié
@@ -26,7 +14,6 @@ function Logements({data}) {
     <main>
       <div className="logement">
         <Carousel logement={logement} />
-        {/* <Carousel pictures={logement.pictures} title={logement.title} />        */}
         <div className='info'>
           <div className="info_detail">
             <div className='localisation'>
@@ -57,4 +44,4 @@ function Logements({data}) {
   );
 }
 
-export default Logements
+export default DetailLogement
