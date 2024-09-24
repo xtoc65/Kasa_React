@@ -1,9 +1,14 @@
-import Logo from '../assets/BannierApropos.png'
-import Collapse from '../components/Collapse'
-import '../assets/styles/bannier.css'
+// Importation de l'image de la bannière pour la page À propos
+import Logo from '../assets/BannierApropos.png';
+// Importation du composant Collapse pour les sections repliables
+import Collapse from '../components/Collapse';
+// Importation du fichier CSS pour le style de la page À propos
+import '../assets/styles/bannier.css';
+
 
 
 function Apropos() {
+  // Définition des données des sections de la page À propos
   const slides = [
     {
       id: 1,
@@ -32,6 +37,7 @@ function Apropos() {
         <div className="banner">
             <img src={Logo} alt="Bannier A propos" />
         </div>    
+        {/* Boucle pour afficher chaque section repliable avec les informations définies dans slides */}
         {slides.map(slide => <Collapse key={slide.id} id={slide.id} title={slide.title} content={slide.content}/>)}    
     </main>
   );

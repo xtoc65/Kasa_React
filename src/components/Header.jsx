@@ -1,6 +1,9 @@
-import { NavLink } from 'react-router-dom'
-import Logo from '../assets/Logo.png'
-import '../assets/styles/header.css'
+// Importation de NavLink depuis react-router-dom pour la navigation
+import { NavLink } from 'react-router-dom';
+// Importation de l'image du logo
+import Logo from '../assets/Logo.png';
+// Importation du fichier CSS pour le style de l'en-tête
+import '../assets/styles/header.css';
 
 function Header() {
     return (
